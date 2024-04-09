@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import './Questions.css';
+import './Quiz.css';
 
 export default function QuizResult() {
   let correctCount = 0;

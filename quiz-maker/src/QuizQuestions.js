@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import he from 'he';
 import { useHistory } from 'react-router-dom';
-import './Questions.css';
+import './Quiz.css';
 
 export default function Questions({ category, difficulty }) {
 

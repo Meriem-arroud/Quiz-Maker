@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Questions from './Questions';
+import QuizQuestions from './QuizQuestions';
 
-export default function Quiz() {
+export default function QuizForm() {
 
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -53,7 +53,7 @@ export default function Quiz() {
         <option value="hard">Hard</option>
       </select>
       <button id="createBtn" onClick={handleCreateQuiz}>Create</button>
-      {showQuestions && <Questions category={selectedCategory} difficulty={selectedDifficulty} />}
+      {showQuestions && <QuizQuestions category={selectedCategory} difficulty={selectedDifficulty} />}
     </div>
   );
 }
