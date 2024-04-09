@@ -9,10 +9,10 @@ export default function QuizResult() {
   return (
     <div>
       <h4>RESULTS</h4>
-      {questions.map((question, index) => (
-        <div key={index} className="question-div">
+      {questions.map((question, questionIndex) => (
+        <div key={questionIndex} className="question-div">
           <p>{question.question}</p>
-          {question.answers.map((answer, idx) => {
+          {question.answers.map((answer, answerIndex) => {
             const isCorrect = selectedAnswers.includes(answer) && answer === question.correct_answer;
             const isSelected = selectedAnswers.includes(answer);
 
@@ -24,7 +24,8 @@ export default function QuizResult() {
             }
 
             return (
-              <button key={idx} style={{ marginRight: '10px' }} className={isSelected ? (isCorrect ? 'btn btn-success' : 'btn btn-danger') : (isActualCorrectAnswer ? 'btn btn-success' : 'btn btn-outline-success')}>
+              <button key={answerIndex} style={{ marginRight: '10px' }} 
+              className={isSelected ? (isCorrect ? 'btn btn-success' : 'btn btn-danger') : (isActualCorrectAnswer ? 'btn btn-success' : 'btn btn-outline-success')}>
                 {answer}
               </button>
             );
